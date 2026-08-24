@@ -1,4 +1,4 @@
-name: Student CI-CD Pipeline
+name: Student Result CI-CD Pipeline
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    name: CI - Test Application
+    name: CI - Test Student Result
     runs-on: ubuntu-latest
 
     steps:
@@ -22,12 +22,12 @@ jobs:
         run: |
           pip install pytest
 
-      - name: Run Tests
+      - name: Run Automated Tests
         run: |
           pytest
 
   deploy:
-    name: CD - Deploy Application
+    name: CD - Deploy Student Result Application
     needs: test
     runs-on: ubuntu-latest
 
@@ -37,4 +37,4 @@ jobs:
 
       - name: Deploy Application
         run: |
-          echo "Application deployed successfully!"
+          echo "Student Result Application deployed successfully!"
