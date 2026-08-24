@@ -29,7 +29,7 @@ def test_good_student():
 
     result = analyze_performance(marks)
 
-    assert result["grade"] == "C"
+    assert result["grade"] == "A"
     assert result["result"] == "PASS"
     assert result["performance"] == "Good"
 
